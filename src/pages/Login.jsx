@@ -39,8 +39,8 @@ async function sendData(data, navigate) {
 
 function Login() {
   const [formData, setFormData] = useState({
-    email: '',
-    motdepasse: '',
+    email: 'fenosoarandria@gmail.com',
+    motdepasse: 'admin1',
   });
 
   const [error, setError] = useState(null);

@@ -32,15 +32,22 @@ function ListeCategorie() {
 
   const updateCategorie = async (idVoiture) => {
     try {
-      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/updateCategorie?id=${idVoiture}&nom=${newNom}`;
+      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/updateCategorie?id=${idVoiture}`;
+      
+      const data = {
+        nom: newNom,
+      };
+  
       const response = await fetch(url, {
         method: 'POST',
+        credentials: 'same-origin',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${sessionStorage.getItem('id')}`
-        }
+        },
+        body: JSON.stringify(data),
       });
-
+  
       if (response.ok) {
         console.log(newNom + "  et " + idVoiture);
         console.log('Update effectué avec succès.');
@@ -53,6 +60,7 @@ function ListeCategorie() {
       console.error('Erreur lors de la mise à jour de la catégorie:', error);
     }
   };
+  
 
   const handleInputChange = (e) => {
     setNewNom(e.target.value);

@@ -108,7 +108,6 @@ function extractFileNameFromUrl(url) {
       fetchData();
     }, []);
 
-    console.log(photo[3])
     const settings = {
       dots: false,
       infinite: true,
