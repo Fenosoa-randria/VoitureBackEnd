@@ -10,7 +10,7 @@ async function sendData(data, navigate) {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: `email=${encodeURIComponent(data.email)}&motdepasse=${encodeURIComponent(data.motdepasse)}`,
+      body: `email=${encodeURIComponent(data.email)}&motdepasse=${encodeURIComponent(data.motdepasse)}`
     });
 
     if (response.ok) {
