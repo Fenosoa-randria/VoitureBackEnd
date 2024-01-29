@@ -28,7 +28,7 @@ const CarGridAdmin = () => {
       try {
         const response = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllMieuxVisite', {
           method: 'GET',
-          credentials: 'include'
+          credentials: 'same-origin'
         });
   
         const mieuxData = await response.json(); // Assuming the response is in JSON format
@@ -72,7 +72,7 @@ const CarGridAdmin = () => {
       try {
         const photoData = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture', {
           method: 'GET',
-          credentials: 'include'
+          credentials: 'same-origin'
         });
 
         const photo = await photoData.json();
