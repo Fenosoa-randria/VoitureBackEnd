@@ -32,20 +32,14 @@ function ListeCategorie() {
 
   const updateCategorie = async (idVoiture) => {
     try {
-      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/updateCategorie?id=${idVoiture}`;
+      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/updateCategorie?id=${idVoiture}&nom=${newNom}`;
       
-      const data = {
-        nom: newNom,
-      };
-  
       const response = await fetch(url, {
         method: 'POST',
-        credentials: 'same-origin',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${sessionStorage.getItem('id')}`
-        },
-        body: JSON.stringify(data),
+        }
       });
   
       if (response.ok) {
@@ -69,6 +63,7 @@ function ListeCategorie() {
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;
   const currentPosts = categorie.slice(indexOfFirstPost, indexOfLastPost);
+  
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
