@@ -11,14 +11,14 @@ function ListeCategorie() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = 'https://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllCategorie';
-        const response = await fetch(url, {
+        const response = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllCategorie', {
           method: 'GET',
-          credentials: 'include',
+          credentials: 'same-origin',
           headers: {
             'Authorization': `Bearer ${sessionStorage.getItem('id')}`
           }
         });
+
 
         const categorieData = await response.json();
         setCategorie(categorieData);
@@ -32,7 +32,7 @@ function ListeCategorie() {
 
   const updateCategorie = async (idVoiture) => {
     try {
-      const url = `https://finalprojectcar-production-aab1.up.railway.app/api/admin/updateCategorie?id=${idVoiture}&nom=${newNom}`;
+      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/updateCategorie?id=${idVoiture}&nom=${newNom}`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {
