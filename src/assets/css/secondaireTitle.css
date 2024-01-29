@@ -65,11 +65,11 @@
     }
     #contenu{
         display: flex;
-        text-align: start;
+        text-align: left;
         padding:20px;
         flex-direction: column;
-        align-items: start;
-        justify-content: start;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
     #secondairetitle #image {
         padding-left: 10px;
