@@ -36,7 +36,7 @@ const AnnonceDetailsAdmin = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const voitureData = await fetch(`http://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllByIdVoiture?id_voiture=${id}`, 
+        const voitureData = await fetch(`https://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllByIdVoiture?id_voiture=${id}`, 
         {method: 'GET' ,
         headers: {
         'Authorization': `Bearer ${sessionStorage.getItem("id")}`  // Assurez-vous de remplacer votre_token par le vrai jeton d'accès
@@ -55,7 +55,7 @@ const AnnonceDetailsAdmin = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const photoData = await fetch(`http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture`,{ method: 'GET' });
+        const photoData = await fetch(`https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture`,{ method: 'GET' });
         const photo = await photoData.json();
         setPhoto(photo);
       } catch (error) {

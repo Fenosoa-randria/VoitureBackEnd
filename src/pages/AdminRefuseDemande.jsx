@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 const RefuseAnnonce = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllByIdVoiture?id_voiture=${id}`;
+  const url = `https://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllByIdVoiture?id_voiture=${id}`;
   const hasFetchedData = useRef(false);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const RefuseAnnonce = () => {
 
           const voiture = await voitureAnnonceData.json();
           if (voiture != null && voiture.length > 0) {
-            const acceptUrl = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/insertRefuseAnnonce?id_user=${voiture[0].idUtilisateur}&id_voiture=${voiture[0].idVoiture}`;
+            const acceptUrl = `https://finalprojectcar-production-aab1.up.railway.app/api/admin/insertRefuseAnnonce?id_user=${voiture[0].idUtilisateur}&id_voiture=${voiture[0].idVoiture}`;
             
             // console.log("Before insertion:", new Date());
 

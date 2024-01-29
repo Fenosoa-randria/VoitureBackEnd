@@ -11,7 +11,7 @@ function ListeModele() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = 'http://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllModele';
+        const url = 'https://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllModele';
         const response = await fetch(url, {
           method: 'GET',
           credentials: 'include',
@@ -32,7 +32,7 @@ function ListeModele() {
 
   const updateModele = async (idModele) => {
     try {
-      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/updateModele?id=${idModele}&nom=${newNom}`;
+      const url = `https://finalprojectcar-production-aab1.up.railway.app/api/admin/updateModele?id=${idModele}&nom=${newNom}`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {

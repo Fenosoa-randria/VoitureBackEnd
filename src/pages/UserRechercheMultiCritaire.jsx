@@ -21,8 +21,8 @@ const SearchFormUser = () => {
     
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllProposVoiture`, {method: 'GET' });
-        const nombreVoiture = await fetch(`http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectCountVoiture`, {method: 'GET' });
+        const response = await fetch(`https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllProposVoiture`, {method: 'GET' });
+        const nombreVoiture = await fetch(`https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectCountVoiture`, {method: 'GET' });
         const resp = await response.json();
         const nombre = await nombreVoiture.json();
         setCompter(nombre);
@@ -59,7 +59,7 @@ const SearchFormUser = () => {
     const fetchData = async () => {
       try {
         // eslint-disable-next-line no-undef
-        const photoData = await fetch(`http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture`,{ method: 'GET' });
+        const photoData = await fetch(`https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture`,{ method: 'GET' });
         const photo = await photoData.json();
         setPhoto(photo);
       } catch (error) {

@@ -22,7 +22,7 @@ const CarGridIndex = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllVoiture`, {
+        const response = await fetch(`https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllVoiture`, {
           method: 'GET',
           credentials: 'include'
         });
@@ -42,7 +42,7 @@ const CarGridIndex = () => {
     const fetchData = async () => {
       try {
         // eslint-disable-next-line no-undef
-        const photoData = await fetch(`http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture`, {
+        const photoData = await fetch(`https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture`, {
           method: 'GET' ,
           credentials: 'include'
         });
@@ -62,7 +62,7 @@ const CarGridIndex = () => {
   useEffect(() => {
     const fetchDataFavoris = async () => {
       try {
-        const response = await fetch(`http://finalprojectcar-production-aab1.up.railway.app/api/utilisateur/selectAllFavoris`, {
+        const response = await fetch(`https://finalprojectcar-production-aab1.up.railway.app/api/utilisateur/selectAllFavoris`, {
           method: 'GET', // ou 'POST' ou toute autre méthode selon vos besoins
           headers: {
             'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ const CarGridIndex = () => {
 // Inserer le favoris 
   const envoyerFavori = async (idVoiture) => {
     try {
-      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/utilisateur/insertFavoris?id_voiture=${idVoiture}`;
+      const url = `https://finalprojectcar-production-aab1.up.railway.app/api/utilisateur/insertFavoris?id_voiture=${idVoiture}`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {
@@ -110,7 +110,7 @@ const CarGridIndex = () => {
 // Supprimer le favoris
   const supprimerFavori = async (idVoiture) => {
     try {
-      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/utilisateur/deleteFavoris?id_voiture=${idVoiture}`;
+      const url = `https://finalprojectcar-production-aab1.up.railway.app/api/utilisateur/deleteFavoris?id_voiture=${idVoiture}`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {

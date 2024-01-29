@@ -12,7 +12,7 @@ const YearlyChart = () => {
 
   const fetchData = async () => {
     try {
-      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/SelectStatistiqueMarque`;
+      const url = `https://finalprojectcar-production-aab1.up.railway.app/api/admin/SelectStatistiqueMarque`;
       const response = await fetch(url, {
         method: 'GET',
         headers: {

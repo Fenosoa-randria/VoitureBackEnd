@@ -15,7 +15,7 @@ const ElementsVoiture = () => {
   // Generic function to insert an element
   const insertElement = async (elementType, elementValue) => {
     try {
-      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/insert${elementType}?nom=${elementValue}`;
+      const url = `https://finalprojectcar-production-aab1.up.railway.app/api/admin/insert${elementType}?nom=${elementValue}`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {

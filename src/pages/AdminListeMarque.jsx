@@ -11,7 +11,7 @@ function ListeMarque() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = 'http://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllMarque';
+        const url = 'https://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllMarque';
         const response = await fetch(url, {
           method: 'GET',
           credentials: 'include',
@@ -32,7 +32,7 @@ function ListeMarque() {
 
   const updateMarque = async (idMarque) => {
     try {
-      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/updateMarque?id=${idMarque}&nom=${newNom}`;
+      const url = `https://finalprojectcar-production-aab1.up.railway.app/api/admin/updateMarque?id=${idMarque}&nom=${newNom}`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {

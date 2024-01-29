@@ -26,7 +26,7 @@ const CarGridAdmin = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllMieuxVisite', {
+        const response = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllMieuxVisite', {
           method: 'GET',
           credentials: 'include'
         });
@@ -46,7 +46,7 @@ const CarGridAdmin = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = 'http://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllVoitureDemandeAnnonce';
+        const url = 'https://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllVoitureDemandeAnnonce';
         const response = await fetch(url, {
           method: 'GET',
           credentials: 'include',
@@ -70,7 +70,7 @@ const CarGridAdmin = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const photoData = await fetch('http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture', {
+        const photoData = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture', {
           method: 'GET',
           credentials: 'include'
         });

@@ -22,12 +22,12 @@ const SearchForm = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          'http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllProposVoiture',{
+          'https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllProposVoiture',{
           method: 'GET',
         });
         const resp = await response.json();
 
-        const nombreVoiture = await fetch('http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectCountVoiture',{
+        const nombreVoiture = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectCountVoiture',{
             method: 'GET'
         });
         const nombre = await nombreVoiture.json();

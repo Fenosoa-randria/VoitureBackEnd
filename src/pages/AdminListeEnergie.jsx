@@ -13,7 +13,7 @@ function ListeEnergie() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = 'http://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllEnergie';
+        const url = 'https://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllEnergie';
         const response = await fetch(url, {
           method: 'GET',
           credentials: 'include',
@@ -34,7 +34,7 @@ function ListeEnergie() {
 
   const updateEnergie = async (idEnergie) => {
     try {
-      const url = `http://finalprojectcar-production-aab1.up.railway.app/api/admin/updateEnergie?id=${idEnergie}&nom=${newNom}`;
+      const url = `https://finalprojectcar-production-aab1.up.railway.app/api/admin/updateEnergie?id=${idEnergie}&nom=${newNom}`;
       const response = await fetch(url, {
         method: 'POST',
         headers: {

@@ -10,7 +10,7 @@ const AnnonceDetails = () => {
     const fetchData = async () => {
       try {
         // eslint-disable-next-line no-undef
-        const voitureData = await fetch(`http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectByIdVoiture?id_voiture=${id}}`,{
+        const voitureData = await fetch(`https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectByIdVoiture?id_voiture=${id}}`,{
          method: 'GET' ,
          credentials: 'include'
         });
@@ -28,7 +28,7 @@ const AnnonceDetails = () => {
     const fetchData = async () => {
       try {
         // eslint-disable-next-line no-undef
-        const photoData = await fetch('http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture', {
+        const photoData = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture', {
           method: 'GET' ,
           credentials: 'include'
         });

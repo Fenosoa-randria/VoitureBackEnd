@@ -53,7 +53,7 @@ function extractFileNameFromUrl(url) {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllMieuxVisite', {
+          const response = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllMieuxVisite', {
             method: 'GET',
             credentials: 'include'
           });
@@ -73,7 +73,7 @@ function extractFileNameFromUrl(url) {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch('http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllVoiture', {
+          const response = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllVoiture', {
             method: 'GET',
             credentials: 'include'
           });
@@ -93,7 +93,7 @@ function extractFileNameFromUrl(url) {
       const fetchData = async () => {
         try {
           // eslint-disable-next-line no-undef
-          const photoData = await fetch('http://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture', {
+          const photoData = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture', {
             method: 'GET' ,
             credentials: 'include'
           });
