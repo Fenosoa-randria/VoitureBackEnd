@@ -16,7 +16,7 @@ function ListeEnergie() {
         const url = 'https://finalprojectcar-production-aab1.up.railway.app/api/admin/selectAllEnergie';
         const response = await fetch(url, {
           method: 'GET',
-          credentials: 'include',
+          credentials: 'same-origin',
           headers: {
             'Authorization': `Bearer ${sessionStorage.getItem('id')}`
           }

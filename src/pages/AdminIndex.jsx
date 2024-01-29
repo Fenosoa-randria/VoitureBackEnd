@@ -54,7 +54,7 @@ function extractFileNameFromUrl(url) {
         try {
           const response = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllVoiture', {
             method: 'GET',
-            credentials: 'include'
+            credentials: 'same-origin'
           });
     
           const voitureData = await response.json(); // Assuming the response is in JSON format
@@ -73,8 +73,8 @@ function extractFileNameFromUrl(url) {
         try {
           const response = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllMieuxVisite', {
             method: 'GET',
-            credentials: 'include'
-          });
+            credentials: 'same-origin'
+            });
     
           const mieuxData = await response.json(); // Assuming the response is in JSON format
     
@@ -93,7 +93,7 @@ function extractFileNameFromUrl(url) {
           // eslint-disable-next-line no-undef
           const photoData = await fetch('https://finalprojectcar-production-aab1.up.railway.app/api/accueil/selectAllPhotoVoiture', {
             method: 'GET' ,
-            credentials: 'include'
+            credentials: 'same-origin'
           });
           const photo = await photoData.json(); // Assuming the response is in JSON format
           

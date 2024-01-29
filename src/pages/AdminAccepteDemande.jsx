@@ -13,6 +13,7 @@ const AcceptAnnonce = () => {
         try {
           const voitureAnnonceData = await fetch(url, {
             method: 'GET',
+            credentials: 'same-origin',
             headers: {
               'Authorization': `Bearer ${sessionStorage.getItem("id")}`
             }
