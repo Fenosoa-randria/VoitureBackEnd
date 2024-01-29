@@ -5,10 +5,10 @@ import '../assets/css/login.css';
 
 async function sendData(data, navigate) {
   try {
-    const response = await fetch('http://finalprojectcar-production-aab1.up.railway.app/api/login/verificationLogin', {
+    const response = await fetch(`http://finalprojectcar-production-aab1.up.railway.app/api/login/verificationLogin`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
       body: `email=${encodeURIComponent(data.email)}&motdepasse=${encodeURIComponent(data.motdepasse)}`
     });
