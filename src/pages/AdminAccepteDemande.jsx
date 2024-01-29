@@ -25,7 +25,7 @@ const AcceptAnnonce = () => {
             // console.log("Before insertion:", new Date());
 
             try {
-              const result = await fetch(acceptUrl, {
+              const resultat = await fetch(acceptUrl, {
                 method: 'POST',
                 body: JSON.stringify({ id_admin: sessionStorage.getItem("id") }),
                 headers: {
@@ -33,6 +33,7 @@ const AcceptAnnonce = () => {
                   'Authorization': `Bearer ${sessionStorage.getItem("id")}`
                 }
               });
+              console.log(resultat);
                 // Redirection après l'insertion réussie
                 navigate("/admin");
             } catch (error) {

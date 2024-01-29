@@ -2,7 +2,6 @@ import React, { useState, useEffect }  from 'react';
 import '../assets/css/car.css';  // Créez un fichier CarGrid.css pour définir les styles de votre grille
 import '../assets/css/annonce.css'
 import '../assets/css/carousel.css'
-import { Link } from 'react-router-dom';
 import '../assets/css/bigTitle.css';
 import '../assets/js/SecondaireTitle'
 

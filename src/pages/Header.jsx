@@ -1,24 +1,23 @@
 
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/css/header.css';
 import '../assets/font-awesome-4.7.0/css/font-awesome.css';
 import logo from '../assets/img/logo.jpg';
 import { menuburger } from '../assets/js/header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function Header() {
-  const [mots, setMots] = useState('');
+  // const [mots, ] = useState('');
 
-  const handleSearch = () => {
-    // Effectuer l'action de recherche avec les mots-clés
-    // Créer l'URL de recherche avec les paramètres
-    const searchUrl = `/rechercheSimple?mots=${(mots)}`;
-    console.log(searchUrl);
-    // Rediriger vers la page de recherche
-    window.location.href = searchUrl;
-  };
+  // const handleSearch = () => {
+  //   // Effectuer l'action de recherche avec les mots-clés
+  //   // Créer l'URL de recherche avec les paramètres
+  //   const searchUrl = `/rechercheSimple?mots=${(mots)}`;
+  //   console.log(searchUrl);
+  //   // Rediriger vers la page de recherche
+  //   window.location.href = searchUrl;
+  // };
 
   return (
     <>

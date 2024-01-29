@@ -20,7 +20,7 @@ export default function PaginateFunction ({postPerPage,totalPost,paginate}) {
                 return (
                     <button
                         key={number}
-                        className={activePage == number ? "active" : ""}
+                        className={activePage === number ? "active" : ""}
                         onClick={ () => {
                         handelPageClick(number);
                         paginate(number); }}>

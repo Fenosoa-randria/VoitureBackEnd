@@ -25,7 +25,7 @@ const RefuseAnnonce = () => {
             // console.log("Before insertion:", new Date());
 
             try {
-              const result = await fetch(acceptUrl, {
+               await fetch(acceptUrl, {
                 method: 'POST',
                 body: JSON.stringify({ id_admin: sessionStorage.getItem("id") }),
                 headers: {
