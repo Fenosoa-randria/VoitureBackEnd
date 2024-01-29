@@ -9,7 +9,6 @@ import Header from "./pages/Header.jsx";
 import HeaderUser from "./pages/UserHeader.jsx";
 import Footer from "./pages/Footer.jsx";
 import ResultsSimple from "./pages/ListeRechercheSimple.jsx";
-import FileUpload from "./pages/FileUpload.jsx";
 import CarGridIndex from "./pages/UserIndex.jsx";
 import VoirToutAnnonceUser from "./pages/UserVoirToutAnnonce.jsx";
 import AnnonceDetailsUser from "./pages/UserAnnonceDetails.jsx";
@@ -74,7 +73,6 @@ function MainContent() {
     { path: '/recherche', element: <SearchForm /> },
     { path: '/results', element: <Results /> },
     { path: '/rechercheSimple', element: <ResultsSimple /> },
-    { path: '/upload', element: <FileUpload /> },
     // Login
     { path: '/login', element: <Login /> },
     //Admin
