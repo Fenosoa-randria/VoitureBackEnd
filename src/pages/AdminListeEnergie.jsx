@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../assets/css/pagination.css';
 import Pagination from './Pagination';
-import '../assets/css/list.css'
-
+import '../assets/css/list.css';
 
 function ListeEnergie() {
   const [energie, setEnergie] = useState([]);
@@ -21,17 +20,18 @@ function ListeEnergie() {
             'Authorization': `Bearer ${sessionStorage.getItem('id')}`
           }
         });
-
+  
         const EnergieData = await response.json();
+        console.log(EnergieData); // Ajoutez cette ligne pour vérifier les données reçues
         setEnergie(EnergieData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
-
+  
     fetchData();
   }, []);
-
+  
   const updateEnergie = async (idEnergie) => {
     try {
       const url = `https://finalprojectcar-production-aab1.up.railway.app/api/admin/updateEnergie?id=${idEnergie}&nom=${newNom}`;
@@ -63,6 +63,16 @@ function ListeEnergie() {
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;
   const currentPosts = energie.slice(indexOfFirstPost, indexOfLastPost);
+  const totalPosts = energie.length;
+
+  // Calcul du nombre total de pages
+  const totalPageCount = Math.ceil(totalPosts / postPerPage);
+
+  // Vérification si le nombre total de pages est inférieur à la page actuelle
+  if (currentPage > totalPageCount && totalPageCount > 0) {
+    setCurrentPage(totalPageCount);
+  }
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
@@ -95,7 +105,7 @@ function ListeEnergie() {
             ))}
           </tbody>
         </table>
-        <Pagination postPerPage={postPerPage} totalPost={energie.length} paginate={paginate} />
+        <Pagination postPerPage={postPerPage} totalPost={totalPosts} paginate={paginate} />
       </div>
     </div>
   );
